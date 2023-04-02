@@ -97,11 +97,11 @@ def details_of_reference_images(infer,referenceImage):
         original_h, original_w, _ = reference_img.shape
         bboxes = utils.format_boxes(bboxes, original_h, original_w)
         for i in range(num_objects):
-#             class_indx = int(classes[i])
-#             class_name = class_names[class_indx]
-#             new_box = bboxes[i].astype(int)
-#             new_box_image = reference_img[new_box[1]:new_box[1]+new_box[3], new_box[0]:new_box[0]+new_box[2]]
-              reference_images_outputs.append((new_box_image, class_name))
+            class_indx = int(classes[i])
+            class_name = class_names[class_indx]
+            new_box = bboxes[i].astype(int)
+            new_box_image = reference_img[new_box[1]:new_box[1]+new_box[3], new_box[0]:new_box[0]+new_box[2]]
+            reference_images_outputs.append((new_box_image, class_name))
 
     return reference_images_outputs
 
