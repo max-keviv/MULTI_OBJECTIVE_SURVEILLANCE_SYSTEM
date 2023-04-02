@@ -101,11 +101,6 @@ def details_of_reference_images(infer,referenceImage):
 #             class_name = class_names[class_indx]
 #             new_box = bboxes[i].astype(int)
 #             new_box_image = reference_img[new_box[1]:new_box[1]+new_box[3], new_box[0]:new_box[0]+new_box[2]]
-#             cv2.imshow(class_name, new_box_image)
-#             cv2.waitKey(0)
-#             cv2.destroyAllWindows()
-#             res = input("Do you want to image of {} in tracking Y/N".format(class_name))[0]
-#             if res=='Y':
               reference_images_outputs.append((new_box_image, class_name))
 
     return reference_images_outputs
